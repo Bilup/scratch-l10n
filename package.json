@@ -13,16 +13,15 @@
     "clean": "rimraf ./dist ./locales && mkdirp dist locales",
     "lint": "npm run lint:js && npm run lint:json",
     "lint:js": "eslint . --ext .js",
-    "lint:json": "jshint -e .json www editor/blocks editor/extensions editor/interface editor/paint-editor",
-    "test": "npm run lint:js && npm run validate:editor && npm run validate:www && npm run build && npm run lint:json",
+    "lint:json": "jshint -e .json editor/blocks editor/extensions editor/interface editor/paint-editor",
+    "test": "npm run lint:js && npm run validate:editor && npm run build && npm run lint:json",
     "tw:publish": "./scripts/tw-publish.sh",
     "update": "scripts/update-translations.sh",
     "validate:blocks": "babel-node scripts/validate-translations ./editor/blocks/",
     "validate:editor": "npm run validate:blocks && npm run validate:extensions && npm run validate:interface && npm run validate:paint",
     "validate:extensions": "babel-node scripts/validate-translations ./editor/extensions/ && babel-node scripts/validate-extension-inputs",
     "validate:interface": "babel-node scripts/validate-translations ./editor/interface/",
-    "validate:paint": "babel-node scripts/validate-translations ./editor/paint-editor/",
-    "validate:www": "babel-node scripts/validate-www ./www"
+    "validate:paint": "babel-node scripts/validate-translations ./editor/paint-editor/"
   },
   "repository": {
     "type": "git",
