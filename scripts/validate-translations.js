@@ -11,7 +11,7 @@ const usage = `
    babel-node validate_translations.js path
      path: where to find the downloaded json files
  `;
-// Fail immediately if the TX_TOKEN is not defined
+// Exit with usage if no arguments provided
 if (args.length < 1) {
     process.stdout.write(usage);
     process.exit(1);
