@@ -79,7 +79,7 @@ jobs:
 
         # Replace built files
         rm -rf dist locales
-        mkdir dist
+        mkdir dist locales
         cp -r /tmp/build/dist/* dist/ || true
         cp -r /tmp/build/locales/* locales/ || true
 
